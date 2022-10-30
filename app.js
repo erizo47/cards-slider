@@ -32,7 +32,7 @@ function slidesPlugin () {
     let startActiveSlide = Math.floor(Math.random() * slides.length);
     let currentSlide = 0
     currentSlide = startActiveSlide
-    console.log(currentSlide)
+    
     slides[startActiveSlide].classList.add('active')
     
     for ( const slide of slides) {   
@@ -48,7 +48,7 @@ function slidesPlugin () {
             clearActiveClasses()
             slide.classList.add('active')
             currentSlide = slide.id
-            console.log(currentSlide)
+            
             changeBackground()
         })
 
@@ -57,10 +57,10 @@ function slidesPlugin () {
     
     document.addEventListener('keydown', (event => {
         if (event.key === 'ArrowRight') {
-            console.log("right")
+            
             changeSlide('next')
         } else if (event.key === 'ArrowLeft') {
-            console.log("left")
+            
             changeSlide('prev')
         }
     }))
